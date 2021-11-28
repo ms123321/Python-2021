@@ -1,0 +1,28 @@
+import tkinter from *
+from requests import Requests, Session
+import json
+import pprint
+
+cryptoprices = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
+
+paramaters = {
+	
+	'slug':'bitcoin',
+	'convert':'USD', 
+
+
+}
+
+headers = {
+	'Accepts':'application/json',
+	'X-CMC_PRO_API_KEY':'0cfc20b1-a98d-4314-92c4-71bc5757f57d'
+
+}
+
+session = Session()
+session.headers.update(headers)
+
+response = session.get(Url,params=parameters)
+
+pprint(json.loads(response.text)
+
